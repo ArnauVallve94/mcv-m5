@@ -1,29 +1,23 @@
-# mcv-m5
-Master in Computer Vision - M5 Visual recognition
+## Title of the project.
+Scene Understanding for Autonomous Vehicles (M5 - MCV)
 
-## Fork this project
-Fork this project to start your group project. Add [robertbenavente](https://github.com/robertbenavente) and [lluisgomez](https://github.com/lluisgomez/) as contributors.
+## Name of the group.
 
-## Project description
-Download the [Overleaf document](https://www.overleaf.com/read/qrjbtzwtjhmx)
 
-## Project slides
-- Google slides for [Week 1](https://docs.google.com/presentation/d/1A6hgbNn8N-Iq8MhSa_RPIyf87DBL6PCtoDzy1zqS5Xs/edit?usp=sharing)
-- Google slides for Week 2 (T.B.A.)
-- Google slides for Week 3 (T.B.A.)
-- Google slides for Week 4 (T.B.A.) 
-- Google slides for Week 5 (T.B.A.)
-- Google slides for Week 6 (T.B.A.)
-- Google slides for Week 7 (T.B.A.)
+## Name and contact email of all the team members.
+Yevgeniy Kadranov   - ekadranov@gmail.com
+Santiago Barbarisi  - santiagobarbarisi@gmail.com
+Arnau Vallvé        - arnauvallve94@gmail.com
 
-## Peer review
-- Intra-group evaluation form for Week 2 (T.B.A.)
-- Intra-group evaluation form for Weeks 3/4 (T.B.A.)
-- Intra-group evaluation form for Weeks 5/6 (T.B.A.)
-- Intra-group evaluation form for Week 7 (T.B.A.)
+## Short abstract about the project (2 lines max).
+bla, bla
 
-## News
- - Improve your GitHub account following [this document](https://docs.google.com/document/d/14oxSKWBbMajIB5Bn2CM-DNb-vychY1f393qYfsHNJfY/edit?usp=sharing)
+## Project Slides 
+link to Google Drive folder: https://drive.google.com/drive/folders/1nyDv1cgMg_tFbe6gXcYfD5-Vn03bLpx3?usp=sharing
 
-## Groups
-   (T.B.A.)
+## Link to the Overleaf article (Not editable link), at the moment just the title and structure, no content yet.
+link to Overleaf article: 
+
+## And a summary of the two papers to read (VGG, and InceptionV3/ResNet/DenseNet/SqueezeNet/others).
+VGG summary: 
+--- summary:
