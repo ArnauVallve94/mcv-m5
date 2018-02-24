@@ -5,7 +5,7 @@ Scene Understanding for Autonomous Vehicles (M5 - MCV)
 
 
 ## Name and contact email of all the team members.
-Yevgeniy Kadranov   - ekadranov@gmail.com
+Yevgeniy Kadranov   - ekadranov@gmail.com \n
 Santiago Barbarisi  - santiagobarbarisi@gmail.com
 Arnau Vallvé        - arnauvallve94@gmail.com
 
