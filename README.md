@@ -17,7 +17,7 @@ In this project we will work with an autonomous driving framework using Deep Lea
 link to Google Drive folder: https://drive.google.com/drive/folders/1nyDv1cgMg_tFbe6gXcYfD5-Vn03bLpx3?usp=sharing
 
 ## Overleaf article
-link to Overleaf article: https://www.overleaf.com/read/vtybzywzxhjq
+link to Overleaf article: https://www.overleaf.com/read/rpdkgyndmwnr
 
 ## VGG, and InceptionV3/ResNet/DenseNet/SqueezeNet/others summary.
 VGG summary:  
