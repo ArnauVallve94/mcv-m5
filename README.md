@@ -5,8 +5,10 @@ Scene Understanding for Autonomous Vehicles (M5 - MCV)
 
 
 ## Name and contact email of all the team members.
-Yevgeniy Kadranov   - ekadranov@gmail.com \n
+Yevgeniy Kadranov   - ekadranov@gmail.com
+
 Santiago Barbarisi  - santiagobarbarisi@gmail.com
+
 Arnau Vallvé        - arnauvallve94@gmail.com
 
 ## Short abstract about the project (2 lines max).
@@ -19,5 +21,5 @@ link to Google Drive folder: https://drive.google.com/drive/folders/1nyDv1cgMg_t
 link to Overleaf article: 
 
 ## And a summary of the two papers to read (VGG, and InceptionV3/ResNet/DenseNet/SqueezeNet/others).
-VGG summary: 
+VGG summary:  
 --- summary:
