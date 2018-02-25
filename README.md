@@ -7,7 +7,7 @@ Yevgeniy Kadranov   - ekadranov@gmail.com
 
 Santiago Barbarisi  - santiagobarbarisi@gmail.com
 
-Arnau Vallvé        - arnauvallve94@gmail.com
+Arnau Vallvé        - arnau.vallve94@gmail.com
 
 ## Project abstract
 In this project we will work with an autonomous driving framework using Deep Learning techniques and state-of-the-art models as well as creating our own. We will tackle this using different approaches based on recognition, detection and semantic segmentation.
