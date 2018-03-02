@@ -42,18 +42,17 @@ class One_Net_Model(Model):
         if (self.cf.train_model):
             print('\n > Training the model...')
             hist = self.model.fit_generator(generator=train_gen,
-                                            samples_per_epoch=self.cf.dataset.n_images_train,
+                                            steps_per_epoch=self.cf.dataset.n_images_train // self.cf.batch_size_train,
                                             nb_epoch=self.cf.n_epochs,
                                             verbose=1,
                                             callbacks=cb,
                                             validation_data=valid_gen,
-                                            nb_val_samples=self.cf.dataset.n_images_valid,
+                                            validation_steps=self.cf.dataset.n_images_valid // self.cf.batch_size_valid,
                                             class_weight=None,
                                             max_q_size=10,
                                             nb_worker=1,
                                             pickle_safe=False)
             print('   Training finished.')
-
             return hist
         else:
             return None
