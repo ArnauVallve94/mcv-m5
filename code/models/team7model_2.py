@@ -1,7 +1,7 @@
 # Keras imports
 from keras.utils.vis_utils import plot_model as plot
 from keras.models import Model, Input
-from keras.layers import Dense, Dropout, Flatten, AveragePooling2D, BatchNormalization, Merge, Add
+from keras.layers import Dense, Dropout, Flatten, AveragePooling2D, BatchNormalization, merge, Add
 from keras.layers.convolutional import (Convolution2D, MaxPooling2D)
 
 
@@ -9,7 +9,8 @@ def build_own(img_shape=(3, 224, 224), n_classes=1000):
     img_input = Input(shape=img_shape)
 
     # Steem
-    x = Convolution2D(64, (7, 7), activation='relu', border_mode='same', name='block1_conv1', data_format='channels_first')(img_input)
+    x = Convolution2D(64, (7, 7), activation='relu', border_mode='same', name='block1_conv1',
+                      data_format='channels_first')(img_input)
     x = MaxPooling2D(pool_size=(3, 3), strides=(4, 4), padding='same', name='MaxPool_1')(x)
     x = BatchNormalization(name='Batch_1')(x)
 
@@ -31,7 +32,7 @@ def build_own(img_shape=(3, 224, 224), n_classes=1000):
     inc_1_4_a = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding='same', name='inc_1_4_a')(steem_output)
     inc_1_4_b = Convolution2D(32, 1, 1, border_mode='same', activation='relu', name='inc_1_4_b')(inc_1_4_a)
 
-    out_inc_1 = Merge([inc_1_1, inc_1_2_b, inc_1_3_b, inc_1_4_b], mode='concat', concat_axis=1, name='out_inc_1')
+    out_inc_1 = merge([inc_1_1, inc_1_2_b, inc_1_3_b, inc_1_4_b], mode='concat', concat_axis=1, name='out_inc_1')
 
     # Residual 1
     add_1 = Add()([steem_output, out_inc_1])
@@ -49,7 +50,7 @@ def build_own(img_shape=(3, 224, 224), n_classes=1000):
     inc_2_4_a = MaxPooling2D(pool_size=(3, 3), strides=(1, 1), border_mode='same', name='inc_2_4_a')(add_1)
     inc_2_4_b = Convolution2D(64, 1, 1, border_mode='same', activation='relu', name='inc_2_4_b')(inc_2_4_a)
 
-    out_inc_2 = Merge([inc_2_1, inc_2_2_b, inc_2_3_b, inc_2_4_b], mode='concat', concat_axis=1, name='out_inc_2')
+    out_inc_2 = merge([inc_2_1, inc_2_2_b, inc_2_3_b, inc_2_4_b], mode='concat', concat_axis=1, name='out_inc_2')
 
     # Residual 2
     add_2 = Add()([add_1, out_inc_2])
