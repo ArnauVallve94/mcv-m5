@@ -1,9 +1,8 @@
 # Keras imports
 from keras.utils.vis_utils import plot_model as plot
 from keras.models import Model, Sequential, Input
-from keras.layers import Dense, Dropout, Activation, Flatten, AveragePooling2D, BatchNormalization, merge, Add
-from keras.layers.convolutional import (Convolution2D, MaxPooling2D,
-                                        ZeroPadding2D)
+from keras.layers import Dense, Dropout, Flatten, AveragePooling2D, BatchNormalization, merge, Add
+from keras.layers.convolutional import (Convolution2D, MaxPooling2D)
 
 
 def build_own(img_shape=(3, 224, 224), n_classes=1000):
@@ -67,7 +66,9 @@ def build_own(img_shape=(3, 224, 224), n_classes=1000):
     # Fully connected
     fc1000 = Dense(1000, activation='relu', name='lyr2_dense')(fl)
     dr_out = Dropout(rate=0.3)(fc1000)
-    model = Dense(n_classes, activation='softmax', name='predictions')(dr_out)
+    predictions = Dense(n_classes, activation='softmax', name='predictions')(dr_out)
+
+    model = Model(input=img_input.input, output=predictions)
 
     plot(model, to_file='team7_model_2.png', show_shapes=True, show_layer_names=True)
 
