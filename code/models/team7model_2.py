@@ -9,8 +9,7 @@ def build_own(img_shape=(3, 224, 224), n_classes=1000):
     img_input = Input(shape=img_shape)
 
     # Steem
-    x = Convolution2D(64, (7, 7), activation='relu', border_mode='same', name='block1_conv1',
-                      data_format='channels_first')(img_input)
+    x = Convolution2D(64, (7, 7), activation='relu', border_mode='same', name='block1_conv1')(img_input)
     x = MaxPooling2D(pool_size=(3, 3), strides=(4, 4), padding='same', name='MaxPool_1')(x)
     x = BatchNormalization(name='Batch_1')(x)
 
