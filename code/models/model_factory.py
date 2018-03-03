@@ -11,6 +11,7 @@ from keras.utils.vis_utils import plot_model
 from models.vgg import build_vgg
 #from models.resnet import build_resnet50
 #from models.inceptionV3 import build_inceptionV3
+from models.team7model_2 import build_own
 
 # Detection models
 #from models.yolo import build_yolo
@@ -75,7 +76,7 @@ class Model_Factory():
     def make(self, cf, optimizer=None):
         if cf.model_name in ['lenet', 'alexNet', 'vgg16', 'vgg19', 'resnet50',
                              'InceptionV3', 'fcn8', 'unet', 'segnet',
-                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo']:
+                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo', 'own']:
             if optimizer is None:
                 raise ValueError('optimizer can not be None')
 
@@ -157,6 +158,9 @@ class Model_Factory():
                                cf.dataset.n_priors,
                                load_pretrained=cf.load_imageNet,
                                freeze_layers_from=cf.freeze_layers_from, tiny=True)
+        elif cf.model_name == 'own':
+            model = build_own(in_shape, cf.dataset.n_classes)
+
         else:
             raise ValueError('Unknown model')
 
