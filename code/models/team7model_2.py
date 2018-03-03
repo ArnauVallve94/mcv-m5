@@ -1,6 +1,6 @@
 # Keras imports
 from keras.utils.vis_utils import plot_model as plot
-from keras.models import Model, Sequential, Input
+from keras.models import Model, Input
 from keras.layers import Dense, Dropout, Flatten, AveragePooling2D, BatchNormalization, merge, Add
 from keras.layers.convolutional import (Convolution2D, MaxPooling2D)
 
