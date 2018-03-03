@@ -6,7 +6,7 @@ from keras.layers.convolutional import (Convolution2D, MaxPooling2D,
                                         ZeroPadding2D)
 
 
-def build_vgg(img_shape=(3, 224, 224), n_classes=1000):
+def build_own(img_shape=(3, 224, 224), n_classes=1000):
     img_input = Input(shape=img_shape)
 
     # Steem
