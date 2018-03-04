@@ -24,19 +24,19 @@ The main basis of the VGG model was to focus on smaller filter sizes (3x3) in ne
 # GoogLeNet summary:
 One of the main concerns of GoogLeNet is to provide an efficient network architecture usable for real world applications (e.g. mobile phone) by using stacked Inception modules on the higher layers, for memory efficiency. With it they were able to win the ImageNet 2014 classification with a top-5 error of 6.67%. This module concatenates 1x1, 3x3 and 5x5 filters computed in parallel on a patch, reducing the cost by applying 1x1 filters before computing the larger filters. Due to the efficiency of the modules, they are able to build larger networks without having excessive cost (i.e. GoogLeNet has 22 blocks, 100 layers in total). In order to solve the issue of vanishing gradients for the deeper layers, several auxiliary layers are attached to the network. The final model uses a combination of 7 model versions to generate a final ensemble prediction.
 
-## Week 2
-# Abstract
+# Week 2
+## Abstract
 
 
 Link to the <a href="https://drive.google.com/open?id=1-oUoocoUbNQGtc-Pw5gQgt0Lo1bocq5_CWq0KBo2nQ8">Google Slide</a> presentation
 
 Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G42oRKUpxxuu-zUR_sL87CWXa2Fk">weights of the model</a>
 
-# Short explanation of the code in the repository
+## Short explanation of the code in the repository
 
-# Results of the different experiments
+## Results of the different experiments
 
-# Instructions for using the code
+## Instructions for using the code
 Run VGG16 with TT100k dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_classif.py -e VGG_TT100K
@@ -51,4 +51,4 @@ Run VGG16 with BTS dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
-# Indicate the level of completeness of the goals of this week 
+## Indicate the level of completeness of the goals of this week 
