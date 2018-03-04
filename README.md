@@ -35,7 +35,7 @@ Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G
 ## Short explanation of the code in the repository
 
 ## Results of the different experiments
-![screenshots](/Users/santiagoba88/Google Drive/MCV 17-18/M5 VR/M5_Project/Week 2/plots/TT_res.png "VGG")
+
 
 ## Instructions for using the code
 Run VGG16 with TT100k dataset
