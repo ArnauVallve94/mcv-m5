@@ -38,7 +38,7 @@ Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G
 
 
 ## Instructions for using the code
-Run VGG16 with TT100k dataset
+Run VGG16 with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_classif.py -e VGG_TT100K
 ```
@@ -48,7 +48,7 @@ Run VGG16 with BTS dataset
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/BelgiumTSC_classif.py -e VGG_BTS
 ```
 
-Run VGG16 with BTS dataset
+Run VGG16 with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
