@@ -8,9 +8,7 @@
 | Name  | Contact | 
 | ------------- | ------------- | 
 | Yevgeniy Kadranov  | ekadranov@gmail.com| 
-
 | Santiago Barbarisi | santiagobarbarisi@gmail.com | 
-
 | Arnau Vallvé| arnau.vallve94@gmail.com| 
 
 ## Project abstract
