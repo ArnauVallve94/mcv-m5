@@ -43,7 +43,7 @@ VGG16 with image resize on TT100K dataset| Own Implementation with weight regula
 ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/vgg.jpeg)  |  ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/own.jpeg)
 
 ## Table of results
-| Method | Validation accuracy| Test accuracy |
+| Method (Dataset) | Validation accuracy| Test accuracy |
 | ------------- | ------------- | ------------- |
 | VGG16 (TT100K) w/ resize | 91.36 % | 95.89 % |
 | VGG16 (TT100K) w/ crop | 92.44 % | 96.15 % |
