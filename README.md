@@ -56,9 +56,11 @@ Run VGG16 with BTS dataset
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/BelgiumTSC_classif.py -e VGG_BTS
 ```
 
-Run VGG16 with TT100K dataset
+Run OwN model with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
 ## Indicate the level of completeness of the goals of this week
 100 %
+
+
