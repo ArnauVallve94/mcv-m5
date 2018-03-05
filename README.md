@@ -35,6 +35,13 @@ Link to the <a href="https://drive.google.com/open?id=1-oUoocoUbNQGtc-Pw5gQgt0Lo
 Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G42oRKUpxxuu-zUR_sL87CWXa2Fk">weights of the model</a>
 
 ## Short explanation of the code in the repository
+* *callbacks/*: contains Callback functions
+* *config/*: Configure parameters of the training/testing (e.g. data augmentation, learning rates, etc)
+* *initializations/*: weight initializer
+* *layers/*: Non-native layers (e.g. deconvolution)
+* *metrics/*: Model metrics calculation
+* *models/*: Models used for project. Our implementation is team7model_2.py
+* *tools/*: For large projects handle
 
 ## Results of the different experiments
 
