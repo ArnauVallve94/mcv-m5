@@ -49,7 +49,7 @@ VGG16 with image resize on TT100K dataset| Own Implementation with weight regula
 | VGG16 (TT100K) w/ crop | 92.44 % | 96.15 % |
 | VGG16 (BTS)| 94.44 % | 94.44 % |
 | VGG16 (BTS) w/ transfer learning | 21.03 % | - |
-| VGG16 (KITTI) | % | % |
+| VGG16 (KITTI) | 97.40 % | - |
 | Own implementation (TT100K) | 86.36 % | 94.80 % |
 | Own implementation (TT100K) w/ layer regularizer| 90.54 % | 97.07 % |
 
