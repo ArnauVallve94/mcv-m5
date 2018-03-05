@@ -41,7 +41,7 @@ VGG16 with image resize on TT100K dataset| Own Implementation with weight regula
 ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/vgg.jpeg)  |  ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/own.jpeg)
 
 ## Implemented model Architecture
-Solarized dark             |  
+Our implementation             |  
 :-------------------------:|
 ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/model.png)  |  
 
