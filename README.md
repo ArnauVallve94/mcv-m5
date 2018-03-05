@@ -1,4 +1,4 @@
-# Scene Understanding for Autonomous Vehicles (M5 - MCV)
+# Scene Understanding for Autonomous Vehicles 
 
 ## Name of the group
 ¿?¿
