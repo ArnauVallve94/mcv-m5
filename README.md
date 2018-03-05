@@ -1,13 +1,12 @@
 # Scene Understanding for Autonomous Vehicles (M5 - MCV)
 
 ## Name of the group
+¿?¿
 
 ## Name and contact email of all the team members
-Yevgeniy Kadranov   - ekadranov@gmail.com
-
-Santiago Barbarisi  - santiagobarbarisi@gmail.com
-
-Arnau Vallvé        - arnau.vallve94@gmail.com
+| Yevgeniy Kadranov  | ekadranov@gmail.com| 
+| Santiago Barbarisi | santiagobarbarisi@gmail.com | 
+| Arnau Vallvé| arnau.vallve94@gmail.com| 
 
 ## Project abstract
 In this project we will work with an autonomous driving framework using Deep Learning techniques and state-of-the-art models as well as creating our own. We will tackle this using different approaches based on recognition, detection and semantic segmentation.
@@ -68,5 +67,6 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7
 | c) Done| c.2) Done| - |
 | d) Done| d) Done| - |
 | - | e) Done| - |
+| 100 %| 100%| ...|
 
 
