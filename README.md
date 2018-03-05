@@ -36,6 +36,7 @@ Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G
 
 ## Results of the different experiments
 
+
 ## Instructions for using the code
 Run VGG16 with TT100K dataset
 ```
@@ -51,3 +52,5 @@ Run VGG16 with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
+## Indicate the level of completeness of the goals of this week
+100 %
