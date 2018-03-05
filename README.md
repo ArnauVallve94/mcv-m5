@@ -5,7 +5,9 @@
 
 ## Name and contact email of all the team members
 | Yevgeniy Kadranov  | ekadranov@gmail.com| 
+| ------------- | ------------- | ------------- |
 | Santiago Barbarisi | santiagobarbarisi@gmail.com | 
+| ------------- | ------------- | ------------- |
 | Arnau Vallvé| arnau.vallve94@gmail.com| 
 
 ## Project abstract
@@ -67,6 +69,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7
 | c) Done| c.2) Done| - |
 | d) Done| d) Done| - |
 | - | e) Done| - |
+| ------------- | ------------- | ------------- |
 | 100 %| 100%| ...|
 
 
