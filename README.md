@@ -35,8 +35,6 @@ Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G
 ## Short explanation of the code in the repository
 
 ## Results of the different experiments
-![screenshot](https://drive.google.com/open?id=1NPB67E3I_MJskj_n3YJlh9e_hJzywF97)
-
 
 ## Instructions for using the code
 Run VGG16 with TT100K dataset
