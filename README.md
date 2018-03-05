@@ -61,12 +61,12 @@ Run OwN model with TT100K dataset
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
 ## Completed Tasks
-| Week 1  | Week 2 |
-| ------------- | ------------- |
-| a) Completed | a) Completed|
-| b) Completed| b) Completed|
-| c) Completed| c.2) Completed|
-| d) Completed| d) Completed|
-| - | e) Completed|
+| Week 1  | Week 2 | Week ... |
+| ------------- | ------------- | ------------- |
+| a) Done | a) Done| - |
+| b) Done| b) Done| - |
+| c) Done| c.2) Done| - |
+| d) Done| d) Done| - |
+| - | e) Done| - |
 
 
