@@ -60,7 +60,13 @@ Run OwN model with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7_Model_TT100K
 ```
-## Indicate the level of completeness of the goals of this week
-100 %
+## Completed Tasks
+| Week 1  | Week 2 |
+| ------------- | ------------- |
+| a) Completed | a) Completed|
+| b) Completed| b) Completed|
+| c) Completed| c.2) Completed|
+| d) Completed| d) Completed|
+| - | e) Completed|
 
 
