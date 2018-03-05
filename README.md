@@ -35,15 +35,12 @@ Link to a Google Drive with the <a href="https://drive.google.com/open?id=11-X5G
 ## Short explanation of the code in the repository
 
 ## Results of the different experiments
-VGG16 with image resize on TT100K dataset
-<p align="center">
-<img src="https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/vgg.jpeg" width="600"/>
-</p>
 
-Own Implementation with weight regularizers on convolutional and fully connected layers on TT100K dataset
-<p align="center">
-<img src="https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/own.jpeg" width="600"/>
-</p>
+VGG16 with image resize on TT100K dataset             | Own Implementation with weight regularizers using TT100K dataset
+:-------------------------:|:-------------------------:
+![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/vgg.jpeg)  |  ![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/own.jpeg)
+
+
 
 
 ## Instructions for using the code
