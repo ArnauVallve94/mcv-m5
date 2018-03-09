@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Scene Understanding for Autonomous Vehicles 
 
 ## Name of the group
