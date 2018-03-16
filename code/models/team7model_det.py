@@ -11,15 +11,18 @@ def build_own_det(img_shape=(3, 224, 224), n_classes=1000, num_priors=5):
     img_input = Input(shape=img_shape)
 
     # Steem
-    x = YOLOConvolution2D(64, 7, 7, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block1_conv1')(img_input)
+    x = YOLOConvolution2D(64, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block1_conv1')(img_input)
     x = LeakyReLU(alpha=0.1)(x)
+    """
     x = MaxPooling2D(pool_size=(3, 3), strides=(4, 4), padding='same', name='MaxPool_1')(x)
     x = BatchNormalization(name='Batch_1')(x)
 
     x = YOLOConvolution2D(64, 1, 1, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block2_conv1')(x)
     x = LeakyReLU(alpha=0.1)(x)
+
     x = YOLOConvolution2D(256, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block2_conv2')(x)
     x = LeakyReLU(alpha=0.1)(x)
+
     x = BatchNormalization(name='Batch_2')(x)
 
     steem_output = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding='same', name='steem_output')(x)
@@ -104,8 +107,8 @@ def build_own_det(img_shape=(3, 224, 224), n_classes=1000, num_priors=5):
     conv_9 = LeakyReLU(alpha=0.1)(conv_9)
 
     last_conv = Convolution2D(num_priors * (4 + n_classes + 1), (1, 1), padding='same', strides=(1, 1))(conv_9)
-
-    model = Model(input=img_input.input, output=last_conv)
+    """
+    model = Model(input=img_input.input, output=x)
 
     plot(model, to_file='team7_model_det.png', show_shapes=True, show_layer_names=True)
 
