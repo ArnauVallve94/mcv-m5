@@ -111,7 +111,7 @@ def build_own_det(img_shape=(3, 224, 224), n_classes=1000, num_priors=5):
 
     last_conv = Convolution2D(num_priors * (4 + n_classes + 1), (1, 1), padding='same', strides=(1, 1))(conv_9)
     """
-    model = Model(input=img_input.input, output=x)
+    model = Model(input=img_input, output=x)
 
     plot(model, to_file='team7_model_det.png', show_shapes=True, show_layer_names=True)
 
