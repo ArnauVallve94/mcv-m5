@@ -84,23 +84,23 @@ def build_own_det(img_shape=(3, 224, 224), n_classes=1000, num_priors=5):
     conv_4 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block4_conv1')(conv_3)
     conv_4 = LeakyReLU(alpha=0.1)(conv_4)
 
-    conv_5 = YOLOConvolution2D(512, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block3_conv1')(conv_4)
+    conv_5 = YOLOConvolution2D(512, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block5_conv1')(conv_4)
     conv_5 = LeakyReLU(alpha=0.1)(conv_5)
 
-    conv_6 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block4_conv1')(conv_5)
+    conv_6 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block6_conv1')(conv_5)
     conv_6 = LeakyReLU(alpha=0.1)(conv_6)
 
-    conv_7 = YOLOConvolution2D(512, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block3_conv1')(conv_6)
+    conv_7 = YOLOConvolution2D(512, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block7_conv1')(conv_6)
     conv_7 = LeakyReLU(alpha=0.1)(conv_7)
 
-    conv_8 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block4_conv1')(conv_7)
+    conv_8 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block8_conv1')(conv_7)
     conv_8 = LeakyReLU(alpha=0.1)(conv_8)
 
     reorg = (Reorg())(add_2)
 
     concat = concatenate(conv_8, reorg, axis=1)
 
-    conv_9 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block4_conv1')(concat)
+    conv_9 = YOLOConvolution2D(1024, 3, 3, border_mode='same', subsample=(1,1), epsilon=0.000001, name='block9_conv1')(concat)
     conv_9 = LeakyReLU(alpha=0.1)(conv_9)
 
     last_conv = Convolution2D(num_priors * (4 + n_classes + 1), (1, 1), padding='same', strides=(1, 1))(conv_9)
