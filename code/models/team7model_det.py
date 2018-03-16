@@ -1,4 +1,5 @@
 # Keras imports
+from keras import backend as K
 from keras.utils.vis_utils import plot_model as plot
 from keras.models import Model, Input
 from keras.layers import BatchNormalization, concatenate, Add, merge, LeakyReLU
@@ -8,6 +9,8 @@ from layers.yolo_layers import YOLOConvolution2D, Reorg
 
 
 def build_own_det(img_shape=(3, 224, 224), n_classes=1000, num_priors=5):
+    K.set_image_dim_ordering('th')
+
     img_input = Input(shape=img_shape)
 
     # Steem
