@@ -98,6 +98,20 @@ Run YOLO with TT100K dataset
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_detect.py -e VGG_TT100K
 ```
 
+## Table of results
+| Method (Dataset) | Precision | Recall | F1 | Avg. Recall | Avg. IoU | FPS |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |------------- |
+| YOLO (TT100K) | | | | | | |
+| Tiny YOLO (TT100K) | | | | | | |
+| YOLO (TT100K) + Regul. + Norm.(1) | | | | | | |
+| YOLO (TT100K) + Regul. + Norm.(2)| | | | | | |
+| YOLO (UDACITY) | | | | | | |
+| YOLO (TT100K + UDACITY) | | | | | | |
+
+(1): lr = 0.0001, weight_decay = 0.0001
+(2): lr = 0.001, weight_decay = 0.001
+
+
 ## Completed Tasks
 | Week 1 [100%] | Week 2 [100%] | Week 3 |
 | ------------- | ------------- | ------------- |
