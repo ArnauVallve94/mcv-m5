@@ -101,11 +101,11 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_detect.py -e VGG_TT100K
 ## Table of results
 | Method (Dataset) | Precision | Recall | F1 | Avg. Recall | Avg. IoU | FPS |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |------------- |
-| YOLO (TT100K) | | | | | | |
-| Tiny YOLO (TT100K) | | | | | | |
-| YOLO (TT100K) + Regul. + Norm.(1) | | | | | | |
+| YOLO (TT100K) | 0.552 | 0.288 | 0.378 | 0.968 | 0.744 | 67.911 |
+| Tiny YOLO (TT100K) | 0.575 | 0.311 | 0.404 | 0.957 | 0.735 | 68.314 |
+| YOLO (TT100K) + Regul. + Norm.(1) | 0.610 | 0.324 | 0.423 | 0.975 | 0.756 | 59.828 |
 | YOLO (TT100K) + Regul. + Norm.(2)| | | | | | |
-| YOLO (UDACITY) | | | | | | |
+| YOLO (UDACITY) | 0.156 | 0.153 | 0.155 | 0.523 | 0.507 | 70.723 |
 | YOLO (TT100K + UDACITY) | | | | | | |
 
 (1): lr = 0.0001, weight_decay = 0.0001
