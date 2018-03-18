@@ -88,6 +88,10 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/own_tt100K_classif.py -e Team_7
 ## YOLO (You Only Look Once)
 YOLO is a Neural Network that performs object detection. It achieves twice the mean average precision (63.5) than its predecessors and in a faster way (45 fps). The main difference with respect to the others systems is that it is based on a single stream of convolutions, fully connected and regression layers, with no region proposal step. This makes it able to reason about the whole information of the images and generalise better non observed images.
 
+# SSD (Single Shot MultiBox Detector)
+The idea behind SSD (Single Shot MultiBox Detector) is to achieve faster object detection without sacrifice on detection accuracy, so that it can be used for real-time applications (59 FPS with mAP 74.3% on VOC2007 test, vs. Faster R-CNN 7 FPS with mAP 73.2% or YOLO 45 FPS with mAP 63.4%). To achieve that, they propose to eliminate bounding box proposals and the feature resampling stage. A set of default bounding boxes is used instead, on which different convolutional filters of small size are employed to obtain predictions at multiple scales, using feature maps from different layers from the network at different scales. 
+
+
 ## Completed Tasks
 | Week 1 [100%] | Week 2 [100%] | Week ... |
 | ------------- | ------------- | ------------- |
