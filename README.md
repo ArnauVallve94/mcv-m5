@@ -92,12 +92,17 @@ YOLO is a Neural Network that performs object detection. It achieves twice the m
 ## SSD (Single Shot MultiBox Detector)
 The idea behind SSD (Single Shot MultiBox Detector) is to achieve faster object detection without sacrifice on detection accuracy, so that it can be used for real-time applications (59 FPS with mAP 74.3% on VOC2007 test, vs. Faster R-CNN 7 FPS with mAP 73.2% or YOLO 45 FPS with mAP 63.4%). As in YOLO, both the localization and classification stages can be achieved in a single forward pass. To achieve that, they propose to eliminate bounding box proposals and the feature resampling stage. A set of default bounding boxes is used instead, on which different convolutional filters of small size are employed to obtain predictions at multiple scales, using feature maps from different layers from the network at different scales. 
 
+## Instructions for using the code
+Run YOLO with TT100K dataset
+```
+CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_detect.py -e VGG_TT100K
+```
 
 ## Completed Tasks
-| Week 1 [100%] | Week 2 [100%] | Week ... |
+| Week 1 [100%] | Week 2 [100%] | Week 3 |
 | ------------- | ------------- | ------------- |
-| a) Done | a) Done| - |
-| b) Done| b) Done| - |
-| c) Done| c.2) Done| - |
-| d) Done| d) Done| - |
-| - | e) Done| - |
+| a) Done | a) Done| a) |
+| b) Done| b) Done| b) |
+| c) Done| c.2) Done| c) |
+| d) Done| d) Done| d) |
+| - | e) Done| e) |
