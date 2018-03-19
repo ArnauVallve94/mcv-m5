@@ -10,14 +10,12 @@ import cv2
 """
 
 def yolo_build_gt_batch(batch_gt,image_shape,num_classes,num_priors=5):
-
     h = image_shape[1]/32
     w = image_shape[2]/32
     c = num_classes
     b = num_priors  # TODO pass num_priors
     batch_size = len(batch_gt)
     batch_y = np.zeros([batch_size,h*w,b,c+4+1+1+2+2])
-
     cellx = 32
     celly = 32
     for i,gt in enumerate(batch_gt):
@@ -46,7 +44,7 @@ def yolo_build_gt_batch(batch_gt,image_shape,num_classes,num_priors=5):
 
         for obj in objects:
             probs[obj[5], :, :] = [[0.]*c] * b
-            probs[obj[5], :, int(obj[0])] = 1.
+	    probs[obj[5], :, int(obj[0])] = 1.
             coord[obj[5], :, :] = [obj[1:5]] * b
             prear[obj[5],0] = obj[1] - obj[3]**2 * .5 * w # xleft
             prear[obj[5],1] = obj[2] - obj[4]**2 * .5 * h # yup

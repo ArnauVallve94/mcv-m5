@@ -1,14 +1,14 @@
 # Dataset
-problem_type                 = 'detection'     # ['classification' | 'detection' | 'segmentation']
-dataset_name                 = 'TT100K_detection' # Dataset name
-dataset_name2                = None            # Second dataset name. None if not Domain Adaptation
-perc_mb2                     = None            # Percentage of data from the second dataset in each minibatch
+problem_type                 = 'detection'          # ['classification' | 'detection' | 'segmentation']
+dataset_name                 = 'Udacity'            # Dataset name
+dataset_name2                = None   # Second dataset name. None if not Domain Adaptation
+perc_mb2                     = None                  # Percentage of data from the second dataset in each minibatch
 
 # Model
-model_name                   = 'own_det'          # Model to use: one of 'yolo' or 'tiny-yolo'
+model_name                   = 'yolo'          # Model to use: one of 'yolo' or 'tiny-yolo'
 freeze_layers_from           = None            # Freeze layers from 0 to this layer during training (Useful for finetunning) [None | 'base_model' | Layer_id]
 show_model                   = False           # Show the architecture layers
-load_imageNet                = False            # Load Imagenet weights and normalize following imagenet procedure
+load_imageNet                = True            # Load Imagenet weights and normalize following imagenet procedure
 load_pretrained              = False           # Load a pretrained model for doing finetuning
 weights_file                 = 'weights.hdf5'  # Training weight file name
 
@@ -18,7 +18,7 @@ test_model                   = True            # Test the model
 pred_model                   = False           # Predict using the model
 
 # Debug
-debug                        = True           # Use only few images for debuging
+debug                        = False            # Use only few images for debuging
 debug_images_train           = 160             # N images for training in debug mode (-1 means all)
 debug_images_valid           = 160             # N images for validation in debug mode (-1 means all)
 debug_images_test            = 160             # N images for testing in debug mode (-1 means all)
@@ -45,8 +45,8 @@ seed_test                    = 1924            # Random seed for the testing shu
 
 # Training parameters
 optimizer                    = 'rmsprop'       # Optimizer
-learning_rate                = 0.0001          # Training learning rate
-weight_decay                 = 0.              # Weight decay or L2 parameter norm penalty
+learning_rate                = 0.001          # Training learning rate
+weight_decay                 = 0.001          # Weight decay or L2 parameter norm penalty
 n_epochs                     = 10              # Number of epochs during training
 
 # Callback save results
@@ -99,7 +99,7 @@ TensorBoard_logs_folder      = None             #
 norm_imageNet_preprocess           = False     # Normalize following imagenet procedure
 norm_fit_dataset                   = False     # If True it recompute std and mean from images. Either it uses the std and mean set at the dataset config file
 norm_rescale                       = 1/255.    # Scalar to divide and set range 0-1
-norm_featurewise_center            = False     # Substract mean - dataset
+norm_featurewise_center            = True     # Substract mean - dataset
 norm_featurewise_std_normalization = False     # Divide std - dataset
 norm_samplewise_center             = False     # Substract mean - sample
 norm_samplewise_std_normalization  = False     # Divide std - sample
@@ -108,7 +108,7 @@ norm_zca_whitening                 = False     # Apply ZCA whitening
 cb_weights_method                  = None      # Label weight balance [None | 'median_freq_cost' | 'rare_freq_cost']
 
 # Data augmentation for training
-da_rotation_range                  = 0          # Rnd rotation degrees 0-180
+da_rotation_range                  = 5          # Rnd rotation degrees 0-180
 da_width_shift_range               = 0.       # Rnd horizontal shift
 da_height_shift_range              = 0.       # Rnd vertical shift
 da_shear_range                     = 0.       # Shear in radians
@@ -116,7 +116,7 @@ da_zoom_range                      = 0.       # Zoom
 da_channel_shift_range             = 0.         # Channecf.l shifts
 da_fill_mode                       = 'nearest'  # Fill mode
 da_cval                            = 0.         # Void image value
-da_horizontal_flip                 = False      # Rnd horizontal flip
+da_horizontal_flip                 = True      # Rnd horizontal flip
 da_vertical_flip                   = False      # Rnd vertical flip
 da_spline_warp                     = False      # Enable elastic deformation
 da_warp_sigma                      = 10         # Elastic deformation sigma

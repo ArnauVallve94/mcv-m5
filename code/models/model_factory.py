@@ -4,6 +4,9 @@ import os
 from metrics.metrics import cce_flatt, IoU, YOLOLoss, YOLOMetrics
 from keras import backend as K
 from keras.utils.vis_utils import plot_model
+from keras_loss_function.keras_ssd_loss import SSDLoss 
+from metrics.ssd_training import MultiboxLoss
+
 
 # Classification models
 #from models.lenet import build_lenet
@@ -15,6 +18,7 @@ from models.team7model_2 import build_own
 
 # Detection models
 from models.yolo import build_yolo
+from models.team7model_det import build_own_det
 
 # Segmentation models
 #from models.fcn8 import build_fcn8
@@ -23,7 +27,7 @@ from models.yolo import build_yolo
 #from models.adversarial_semseg import Adversarial_Semseg
 
 from models.model import One_Net_Model
-
+from models.ssd import SSD300	
 
 # Build the model
 class Model_Factory():
@@ -45,12 +49,16 @@ class Model_Factory():
             loss = 'categorical_crossentropy'
             metrics = ['accuracy']
         elif cf.dataset.class_mode == 'detection':
-            in_shape = (cf.dataset.n_channels,
-                        cf.target_size_train[0],
-                        cf.target_size_train[1])
-            # TODO detection : check model, different detection nets may have different losses and metrics
-            loss = YOLOLoss(in_shape, cf.dataset.n_classes, cf.dataset.priors)
-            metrics = [YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_recall'),YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_iou')]
+	    if cf.model_name == 'ssd512':
+	        in_shape = (cf.target_size_train[0], cf.target_size_train[1], cf.dataset.n_channels)
+	        #in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
+		loss = MultiboxLoss(cf.dataset.n_classes)
+	 	metrics = []
+            else:
+	        in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
+                # TODO detection : check model, different detection nets may have different losses and metrics
+                loss = YOLOLoss(in_shape, cf.dataset.n_classes, cf.dataset.priors)
+                metrics = [YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_recall'),YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_iou')]
         elif cf.dataset.class_mode == 'segmentation':
             if K.image_dim_ordering() == 'th':
                 if variable_input_size:
@@ -70,13 +78,13 @@ class Model_Factory():
             metrics = [IoU(cf.dataset.n_classes, cf.dataset.void_class)]
         else:
             raise ValueError('Unknown problem type')
-        return in_shape, loss, metrics
+	return in_shape, loss, metrics
 
     # Creates a Model object (not a Keras model)
     def make(self, cf, optimizer=None):
         if cf.model_name in ['lenet', 'alexNet', 'vgg16', 'vgg19', 'resnet50',
                              'InceptionV3', 'fcn8', 'unet', 'segnet',
-                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo', 'own']:
+                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo', 'own', 'ssd512']:
             if optimizer is None:
                 raise ValueError('optimizer can not be None')
 
@@ -160,7 +168,8 @@ class Model_Factory():
                                freeze_layers_from=cf.freeze_layers_from, tiny=True)
         elif cf.model_name == 'own':
             model = build_own(in_shape, cf.dataset.n_classes)
-
+	elif cf.model_name == 'ssd512':
+            model =SSD300(in_shape, cf.dataset.n_classes)
         else:
             raise ValueError('Unknown model')
 
@@ -170,8 +179,10 @@ class Model_Factory():
             model.load_weights(cf.weights_file, by_name=True)
 
         # Compile model
-        model.compile(loss=loss, metrics=metrics, optimizer=optimizer)
-
+        if cf.model_name == 'ssd512':
+	    model.compile(loss=loss.compute_loss, optimizer=optimizer)
+	else:
+	    model.compile(loss=loss, metrics=metrics, optimizer=optimizer)
         # Show model structure
         if cf.show_model:
             model.summary()

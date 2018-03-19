@@ -19,6 +19,7 @@ from keras import backend as K
 from tools.save_images import save_img2
 from tools.yolo_utils import yolo_build_gt_batch
 
+
 def array_to_img(x, dim_ordering='default', scale=True):
     """Converts a 3D Numpy array to a PIL Image instance.
     # Arguments
@@ -64,7 +65,6 @@ def array_to_img(x, dim_ordering='default', scale=True):
         return pil_image.fromarray(x[:, :, 0].astype('uint8'), 'L')
     else:
         raise ValueError('Unsupported channel number: ', x.shape[2])
-
 
 def img_to_array(img, dim_ordering='default'):
     """Converts a PIL Image instance to a Numpy array.
@@ -1138,7 +1138,7 @@ class DirectoryIterator(Iterator):
         self.color_mode = color_mode
         if self.color_mode == 'rgb' or self.color_mode == 'bgr':
             self.grayscale = False
-            if self.dim_ordering == 'tf':
+	    if self.dim_ordering == 'tf':
                 self.image_shape = self.target_size + (3,)
                 self.gt_image_shape = self.target_size + (1,)
             else:
@@ -1319,7 +1319,7 @@ class DirectoryIterator(Iterator):
         elif self.class_mode == 'detection':
             # TODO detection: check model, other networks may expect a different batch_y format and shape
             # YOLOLoss expects a particular batch_y format and shape
-            batch_y = yolo_build_gt_batch(batch_y, self.image_shape, self.nb_class)
+	    batch_y = yolo_build_gt_batch(batch_y, self.image_shape, self.nb_class)
         elif self.class_mode == None:
             return batch_x
 

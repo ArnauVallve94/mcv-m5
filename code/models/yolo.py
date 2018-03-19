@@ -8,6 +8,7 @@ from keras.layers import LeakyReLU
 from keras.layers import Concatenate
 from keras.layers import Reshape
 from layers.yolo_layers import YOLOConvolution2D,Reorg
+from keras.utils.vis_utils import plot_model as plot
 
 def build_yolo(img_shape=(3, 416, 416), n_classes=80, n_priors=5,
                load_pretrained=False,freeze_layers_from='base_model',
@@ -46,6 +47,8 @@ def build_yolo(img_shape=(3, 416, 416), n_classes=80, n_priors=5,
                layer.trainable = False
             for layer in model.layers[freeze_layers_from:]:
                layer.trainable = True
+
+    plot(model, to_file='yolo.png', show_shapes=True, show_layer_names=True)
 
     return model
 

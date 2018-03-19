@@ -38,8 +38,7 @@ def process(cf):
 
     if cf.train_model:
         # Train the model
-        model.train(train_gen, valid_gen, cb)
-
+        Hist = model.train(train_gen, valid_gen, cb)
     if cf.test_model:
         # Compute validation metrics
         if (valid_gen != None): model.test(valid_gen)
