@@ -104,12 +104,13 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_detect.py -e VGG_TT100K
 | YOLO (TT100K) | 0.552 | 0.288 | 0.378 | 0.968 | 0.744 | 67.911 |
 | Tiny YOLO (TT100K) | 0.575 | 0.311 | 0.404 | 0.957 | 0.735 | 68.314 |
 | YOLO (TT100K) + Regul. + Norm.(1) | 0.610 | 0.324 | 0.423 | 0.975 | 0.756 | 59.828 |
-| YOLO (TT100K) + Regul. + Norm.(2)| | | | | | |
+| YOLO (TT100K) + Regul. + Norm.(2)| 0.673 | 0.379 | 0.485 | 0.990 | 0.810 | 59.800 |
 | YOLO (UDACITY) | 0.156 | 0.153 | 0.155 | 0.523 | 0.507 | 70.723 |
-| YOLO (TT100K + UDACITY) | | | | | | |
+| YOLO (TT100K) + Regul. + Norm.(3) | | | | | | |
 
 (1): lr = 0.0001, weight_decay = 0.0001
 (2): lr = 0.001, weight_decay = 0.001
+(3): lr = 0.001, weight_decay = 0.001, data augmentation
 
 
 ## Completed Tasks
