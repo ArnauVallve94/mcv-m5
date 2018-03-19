@@ -119,10 +119,10 @@ YOLO (TT100K dataset) + Regul. + Norm. (lr = 0.001, weight_decay = 0.001)|
 
 
 ## Completed Tasks
-| Week 1 [100%] | Week 2 [100%] | Week 3 |
+| Week 1 [100%] | Week 2 [100%] | Week 3 [100%]|
 | ------------- | ------------- | ------------- |
-| a) Done | a) Done| a) |
-| b) Done| b) Done| b) |
-| c) Done| c.2) Done| c) |
-| d) Done| d) Done| d) |
-| - | e) Done| e) |
+| a) Done | a) Done| a) Done|
+| b) Done| b) Done| b) Done|
+| c) Done| c.2) Done| c) Done|
+| d) Done| d) Done| d) Done|
+| - | e) Done| e) Done|
