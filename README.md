@@ -97,6 +97,11 @@ Run YOLO with TT100K dataset
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -c config/tt100K_detect.py -e VGG_TT100K
 ```
+## Best YOLO Results 
+
+YOLO (TT100K dataset) + Regul. + Norm. (lr = 0.001, weight_decay = 0.001)| 
+:-------------------------:|
+![](https://github.com/ArnauVallve94/mcv-m5/blob/master/Images/detection_yolo.jpeg)  | 
 
 ## Table of results
 | Method (Dataset) | Precision | Recall | F1 | Avg. Recall | Avg. IoU | FPS |
