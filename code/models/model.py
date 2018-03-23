@@ -44,6 +44,7 @@ class One_Net_Model(Model):
             hist = self.model.fit_generator(generator=train_gen,
                                             steps_per_epoch=self.cf.dataset.n_images_train // self.cf.batch_size_train,
                                             nb_epoch=self.cf.n_epochs,
+                                            epochs=self.cf.n_epochs,
                                             verbose=1,
                                             callbacks=cb,
                                             validation_data=valid_gen,
@@ -145,7 +146,7 @@ class One_Net_Model(Model):
                 else:
                     print "Error: Dataset not found!"
                     quit()
-                priors = [[0.9,1.2], [1.05,1.35], [2.15,2.55], [3.25,3.75], [5.35,5.1]]
+                priors = [[0.9,1.2], [1.05,1.35], [2.15, 2.55], [3.25,3.75], [5.35,5.1]]
                 
                 input_shape = (self.cf.dataset.n_channels,
                         self.cf.target_size_test[0],
@@ -175,7 +176,7 @@ class One_Net_Model(Model):
                     if len(img_paths)%chunk_size == 0 or i+1 == len(imfiles):
                         print(str(i)+'/'+str(len(imfiles)))
                         inputs = np.array(inputs)
-                        net_out = self.model.predict(inputs, batch_size = self.cf.batch_size_test, verbose = 0)
+                        net_out = self.model.predict(inputs, batch_size=self.cf.batch_size_test, verbose=0)
                         # Find correct detections (per image)
                         for i, img_path in enumerate(img_paths):
                             boxes_pred = yolo_postprocess_net_out(net_out[i], priors, classes, detection_threshold, nms_threshold)
