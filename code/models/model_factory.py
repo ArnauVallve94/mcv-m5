@@ -49,14 +49,14 @@ class Model_Factory():
             loss = 'categorical_crossentropy'
             metrics = ['accuracy']
         elif cf.dataset.class_mode == 'detection':
-	    if cf.model_name == 'ssd512':
-	        in_shape = (cf.target_size_train[0], cf.target_size_train[1], cf.dataset.n_channels)
-	        #in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
-		loss = MultiboxLoss(cf.dataset.n_classes)
-	 	metrics = []
+            if cf.model_name == 'ssd512':
+                in_shape = (cf.target_size_train[0], cf.target_size_train[1], cf.dataset.n_channels)
+                #in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
+                loss = MultiboxLoss(cf.dataset.n_classes)
+                metrics = []
             else:
-	        in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
-                # TODO detection : check model, different detection nets may have different losses and metrics
+                in_shape = (cf.dataset.n_channels, cf.target_size_train[0], cf.target_size_train[1])
+                    # TODO detection : check model, different detection nets may have different losses and metrics
                 loss = YOLOLoss(in_shape, cf.dataset.n_classes, cf.dataset.priors)
                 metrics = [YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_recall'),YOLOMetrics(in_shape, cf.dataset.n_classes, cf.dataset.priors,name='avg_iou')]
         elif cf.dataset.class_mode == 'segmentation':
@@ -80,7 +80,7 @@ class Model_Factory():
             metrics=['accuracy',jaccard_coef]
         else:
             raise ValueError('Unknown problem type')
-	return in_shape, loss, metrics
+        return in_shape, loss, metrics
 
     # Creates a Model object (not a Keras model)
     def make(self, cf, optimizer=None):
@@ -170,8 +170,8 @@ class Model_Factory():
                                freeze_layers_from=cf.freeze_layers_from, tiny=True)
         elif cf.model_name == 'own':
             model = build_own(in_shape, cf.dataset.n_classes)
-	elif cf.model_name == 'ssd512':
-            model =SSD300(in_shape, cf.dataset.n_classes)
+        elif cf.model_name == 'ssd512':
+                model =SSD300(in_shape, cf.dataset.n_classes)
         else:
             raise ValueError('Unknown model')
 
@@ -182,9 +182,9 @@ class Model_Factory():
 
         # Compile model
         if cf.model_name == 'ssd512':
-	    model.compile(loss=loss.compute_loss, optimizer=optimizer)
-	else:
-	    model.compile(loss=loss, metrics=metrics, optimizer=optimizer)
+            model.compile(loss=loss.compute_loss, optimizer=optimizer)
+        else:
+            model.compile(loss=loss, metrics=metrics, optimizer=optimizer)
         # Show model structure
         if cf.show_model:
             model.summary()
