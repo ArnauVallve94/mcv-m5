@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a854669f-c8ef-458c-9489-f429a9e7826b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/code/models/fcn8.py" afterPath="$PROJECT_DIR$/code/models/fcn8.py" />
-      <change beforePath="$PROJECT_DIR$/code/models/model.py" afterPath="$PROJECT_DIR$/code/models/model.py" />
-      <change beforePath="$PROJECT_DIR$/code/train.py" afterPath="$PROJECT_DIR$/code/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,84 +13,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fcn8.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/models/fcn8.py">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/models/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="-624">
+              <caret line="68" column="41" lean-forward="true" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
               <folding>
-                <element signature="e#16#42#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yolo_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/tools/yolo_utils.py">
+      <file leaf-file-name="fcn8.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/models/fcn8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+            <state relative-caret-position="35">
+              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
-                <element signature="e#59#202#1" expanded="false" />
-                <element signature="e#280#2362#0" expanded="false" />
-                <element signature="e#552#2342#0" expanded="false" />
-                <element signature="e#583#857#0" expanded="false" />
-                <element signature="e#583#659#0" expanded="false" />
-                <element signature="e#928#1303#0" expanded="false" />
-                <element signature="e#1488#1916#0" expanded="false" />
-                <element signature="e#2385#2597#0" expanded="false" />
-                <element signature="e#2422#2597#0" expanded="false" />
-                <element signature="e#2629#2788#0" expanded="false" />
-                <element signature="e#2822#2959#0" expanded="false" />
-                <element signature="e#2986#3062#0" expanded="false" />
-                <element signature="e#3087#3135#0" expanded="false" />
-                <element signature="e#3164#3195#0" expanded="false" />
-                <element signature="e#3212#3241#0" expanded="false" />
-                <element signature="e#3264#3332#0" expanded="false" />
-                <element signature="e#3417#4434#0" expanded="false" />
-                <element signature="e#3616#4057#0" expanded="false" />
-                <element signature="e#3640#4057#0" expanded="false" />
-                <element signature="e#3663#4057#0" expanded="false" />
-                <element signature="e#4107#4419#0" expanded="false" />
-                <element signature="e#4238#4419#0" expanded="false" />
-                <element signature="e#4331#4419#0" expanded="false" />
-                <element signature="e#4525#6233#0" expanded="false" />
-                <element signature="e#4559#4838#0" expanded="false" />
-                <element signature="e#4957#6219#0" expanded="false" />
-                <element signature="e#5139#6219#0" expanded="false" />
-                <element signature="e#5563#5726#0" expanded="false" />
-                <element signature="e#6236#6384#1" expanded="false" />
-                <element signature="e#6409#6572#0" expanded="false" />
-                <element signature="e#6455#6572#0" expanded="false" />
-                <element signature="e#6624#6803#0" expanded="false" />
-                <element signature="e#6665#6803#0" expanded="false" />
-                <element signature="e#6851#7144#0" expanded="false" />
-                <element signature="e#6915#7144#0" expanded="false" />
-                <element signature="e#7168#10622#0" expanded="false" />
-                <element signature="e#7246#10622#0" expanded="false" />
-                <element signature="e#10650#12381#0" expanded="false" />
-                <element signature="e#10728#12381#0" expanded="false" />
-                <element signature="e#12433#15260#0" expanded="false" />
-                <element signature="e#12515#13281#0" expanded="false" />
-                <element signature="e#12588#13281#0" expanded="false" />
-                <element signature="e#12793#13111#0" expanded="false" />
-                <element signature="e#13431#14159#0" expanded="false" />
-                <element signature="e#13504#14159#0" expanded="false" />
-                <element signature="e#13690#14039#0" expanded="false" />
-                <element signature="e#13744#14005#0" expanded="false" />
-                <element signature="e#14215#14905#1" expanded="false" />
-                <element signature="e#14992#15240#0" expanded="false" />
-                <element signature="e#15065#15240#0" expanded="false" />
-                <element signature="e#15300#22908#0" expanded="false" />
-                <element signature="e#22951#24623#0" expanded="false" />
-                <element signature="e#23120#24606#0" expanded="false" />
-                <element signature="e#23193#24285#0" expanded="false" />
-                <element signature="e#23290#24057#0" expanded="false" />
-                <element signature="e#23396#23697#0" expanded="false" />
-                <element signature="e#23734#24011#0" expanded="false" />
-                <element signature="e#24090#24285#0" expanded="false" />
-                <element signature="e#24334#24575#0" expanded="false" />
-                <element signature="e#24625#24667#0" expanded="false" />
+                <element signature="e#16#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -275,7 +213,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -284,7 +221,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35572138" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35572138" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -300,7 +237,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/models/model.py</url>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -808,6 +752,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/weights/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/models/model_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="90" column="12" lean-forward="false" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/tools/data_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="1299" column="38" lean-forward="false" selection-start-line="1299" selection-start-column="38" selection-end-line="1299" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/config/camvid_segmentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/tools/yolo_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -877,53 +856,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/weights/README.md">
+    <entry file="file://$PROJECT_DIR$/code/models/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/models/model_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="90" column="12" lean-forward="false" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+        <state relative-caret-position="-624">
+          <caret line="68" column="41" lean-forward="true" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/models/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="199" column="28" lean-forward="false" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/tools/data_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="1299" column="38" lean-forward="false" selection-start-line="1299" selection-start-column="38" selection-end-line="1299" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/config/camvid_segmentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/models/fcn8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="35">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="e#16#42#0" expanded="true" />
           </folding>
