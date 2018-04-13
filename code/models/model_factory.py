@@ -22,12 +22,15 @@ from models.team7model_det import build_own_det
 
 # Segmentation models
 from models.fcn8 import build_fcn8
+from models.Segnet import build_segnet
+from models.VGGSegnet import VGGSegnet
 
 # Adversarial models
 #from models.adversarial_semseg import Adversarial_Semseg
 
 from models.model import One_Net_Model
 from models.ssd import SSD300	
+
 
 # Build the model
 class Model_Factory():
@@ -86,7 +89,7 @@ class Model_Factory():
     def make(self, cf, optimizer=None):
         if cf.model_name in ['lenet', 'alexNet', 'vgg16', 'vgg19', 'resnet50',
                              'InceptionV3', 'fcn8', 'unet', 'segnet',
-                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo', 'own', 'ssd512']:
+                             'segnet_basic', 'resnetFCN', 'yolo', 'tiny-yolo', 'own', 'ssd512', 'VGGSegnet']:
             if optimizer is None:
                 raise ValueError('optimizer can not be None')
 
@@ -172,7 +175,13 @@ class Model_Factory():
             model = build_own(in_shape, cf.dataset.n_classes)
         elif cf.model_name == 'ssd512':
                 model =SSD300(in_shape, cf.dataset.n_classes)
-        else:
+	elif cf.model_name == 'segnet':
+                model =build_segnet(in_shape, cf.dataset.n_classes)
+ 	elif cf.model_name == 'VGGSegnet':
+                model =VGGSegnet(in_shape, cf.dataset.n_classes)
+ 
+
+	else:
             raise ValueError('Unknown model')
 
         # Load pretrained weights
