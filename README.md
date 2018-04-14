@@ -139,12 +139,10 @@ CUDA_VISIBLE_DEVICES=0 python train.py -c config/camvid_segmentation.py -e camvi
 | FCN-8* (CamVid) | 92.47 % | 87.03 % | 65.85 % | 49.11 % | 14.6 | 13.1 |
 | FCN-8* (Polyps) |  |  |  |  |  |  |
 | SegNet (CamVid) | 90.44 % | 79.87 % | 59.68 % | 38.56 % | 21.2 | 19.4|
-| SegNet* (CamVid) |  |  |  |  |  |  |
+| SegNet* (CamVid) | 90.70 % | 81.72 % | 58.39 % | 39.80 % | 20 | 19.1 |
 | SegNet* (Polyps) |  |  |  |  |  |  |
 
 *: Weight Regularisation + mean normalisation
-
-
 
 ## Completed Tasks
 | Week 1 [100%] | Week 2 [100%] | Week 3 [100%] | Week 4 [] |
