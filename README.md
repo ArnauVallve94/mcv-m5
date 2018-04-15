@@ -122,9 +122,27 @@ YOLO (TT100K dataset) + Regul. + Norm. (lr = 0.001, weight_decay = 0.001)|
 
 ## Abstract
 
-## Fully convolutional networks for semantic segmentation 
+## FCN 
+Fully Convolutional Network for semantic Segmentation. Authors this model adapted AlexNet, VGG net, GoogLeNet into fully convolutional network in order to perform image semantic segmentation. They replaced fully connected layer of classification model with convolutional in order to keep spatial information for the output. Last layer is 1x1 convolution with depth equal to the number of classes. Softmax is used to predict probability of each pixel belonging to particular class. In order to output be same size as input the upsampling with factor of f is performed as deconvolution with output stride of f (or convolution of stride 1/f), This is done in-network for end-to-end learning by backpropagation from the pixelwise loss
 
-## Second Paper
+## SegNet
+SegNet is an encoder-decoder architecture, based on VGG, for semantic pixel-wise segmentation. It takes the same convolutional architecture from the VGG \cite{simonyan2014very}, without the fully connected part, and ensemble it with a mirrored architecture, where instead of max pooling layers it has up-sampling layers. In addition when a block is max pooled, the pooling indices are stored and pass through  the up-sampling layer. SegNet outperforms all the methods until its creation, achieving 71.2\% class average accuracy and 90.4\% of global average accuracy.
+
+## Instructions for using the code
+Run FCN with CamVid dataset
+CUDA_VISIBLE_DEVICES=0 python train.py -c config/camvid_segmentation.py -e camvid_segmentation_ 
+
+## Table of results
+| Method (Dataset) | Val. accuracy | Test accuracy | Val. Jaccard | Test Jaccard | Val. FPS| Test FPS |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |------------- |
+| FCN-8 (CamVid) | 92.43 % | 87.23 % |65.84 % | 49.10 % | 0.67 | 0.28 |
+| FCN-8* (CamVid) | 92.47 % | 87.03 % | 65.85 % | 49.11 % | 14.6 | 13.1 |
+| FCN-8* (Polyps) |  |  |  |  |  |  |
+| SegNet (CamVid) | 90.44 % | 79.87 % | 59.68 % | 38.56 % | 21.2 | 19.4|
+| SegNet* (CamVid) | 90.70 % | 81.72 % | 58.39 % | 39.80 % | 20 | 19.1 |
+| SegNet* (Polyps) |  |  |  |  |  |  |
+
+*: Weight Regularisation + mean normalisation
 
 ## Completed Tasks
 | Week 1 [100%] | Week 2 [100%] | Week 3 [100%] | Week 4 [] |
